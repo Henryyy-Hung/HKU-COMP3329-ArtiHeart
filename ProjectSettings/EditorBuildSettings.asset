@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HomeScene.unity
+    guid: e33632d58d685074e83740444ba0298f
+  - enabled: 1
+    path: Assets/Scenes/JoyScene.unity
+    guid: 4f29d5af8b5450442865b42be32a2a05
+  - enabled: 1
+    path: Assets/Scenes/L2gamestart.unity
+    guid: acf79ffbdec07d243a11e58a2461ce58
+  - enabled: 1
+    path: Assets/Scenes/L2Level1.unity
+    guid: 81be1908b78bff0429e044697f9cdf1d
+  - enabled: 1
+    path: Assets/Scenes/sadness_main.unity
+    guid: 3c89f3c13395d6d4691b1cd2a303475b
+  - enabled: 1
+    path: Assets/Scenes/l4level1.unity
+    guid: 6ed5cf16e761a9c45b74bb5e7e6b5486
+  - enabled: 1
+    path: Assets/Scenes/l4level2.unity
+    guid: 6e89ae2785e62054bada6fa43339a36b
+  - enabled: 1
+    path: Assets/Scenes/l4level3.unity
+    guid: 55e4a2a672ba8124aa4e637dcd3d2320
+  m_configObjects: {}
