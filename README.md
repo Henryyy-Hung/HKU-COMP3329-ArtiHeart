@@ -41,7 +41,7 @@ Arti-Heart is an educational 3D game developed for the COMP3329 course at the Un
 - [Hung Ka Hing](https://github.com/henryyy-hung)
 - [Hu Yixin](https://github.com/chron1kle)
 - [Zhang Wenkai](https://github.com/wk-zhang)
-- [Zhao Feihan]()
+- [Zhao Feihan](https://github.com/christofyzhao)
 
 ## Acknowledgments
 - Inspiration from "It Takes Two" by Hazelight Studios
