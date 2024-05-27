@@ -13,7 +13,7 @@ public class DialogueSystem : MonoBehaviour
     public GameObject dialogueGUI;
     public Transform dialogueBoxGUI;
 
-    // ���ӱ��������������GUI�������ֶ�
+    // 添加变量来引用输入框GUI和输入字段
     public GameObject inputFieldGUI;
     public InputField inputField;
 
@@ -36,10 +36,9 @@ public class DialogueSystem : MonoBehaviour
     public AudioClip audioClip;
     AudioSource audioSource;
 
-    private OpenAIApi openai = new OpenAIApi("YOUR_API_KEY");
+    private OpenAIApi openai = new OpenAIApi("sk-<YOUR_API>");
     private List<ChatMessage> messages = new List<ChatMessage>();
     public string prompt = "";
-
 
     void Start()
     {
@@ -49,14 +48,13 @@ public class DialogueSystem : MonoBehaviour
 
     void Update()
     {
-        // ����û��Ƿ��Է�������
-
+        // 检查用户是否尝试发送内容
 
         if (isChatting && isTyping)
         {
             if (inputFieldGUI.activeSelf && Input.GetKeyDown(KeyCode.Return))
             {
-                // ������Ϣ
+                // 发送信息
                 OnSendMessage();
             }
             if (inputFieldGUI.activeSelf && Input.GetKeyDown(KeyCode.Return) && string.IsNullOrWhiteSpace(inputField.text))
@@ -69,36 +67,36 @@ public class DialogueSystem : MonoBehaviour
 
         if (isChatting && isTyping && inputFieldGUI.activeSelf && Input.GetKeyDown(KeyCode.Return))
         {
-            // ������Ϣ
+            // 发送信息
             OnSendMessage();
         }
     }
 
-    // ���뷶Χ��չʾѡ����壨����NPC����˵��������AI�Ի������У�
+    // 进入范围，展示选项面板（除非NPC正在说话，或者AI对话进行中）
     public void EnterRangeOfNPC()
     {
-        // �趨���뷶Χ
+        // 设定进入范围
         outOfRange = false;
-        // չʾѡ�����
+        // 展示选项面板
         dialogueGUI.SetActive(true);
-        // ���NPC����˵�������Ҳ��ڶԻ�������
+        // 如果NPC不在说话，并且不在对话环节中
         if (dialogueActive == true || isChatting)
         {
-            // ����ѡ�����
+            // 隐藏选项面板
             dialogueGUI.SetActive(false);
         }
     }
 
-    // �����Ի�
+    // 触发对话
     public void NPCName()
     {
-        // �趨�ڷ�Χ��
+        // 设定在范围内
         outOfRange = false;
-        // �趨�Ի�������
+        // 设定对话框名称
         nameText.text = Names;
-        // ��ʾ�Ի���
+        // 显示对话框
         dialogueBoxGUI.gameObject.SetActive(true);
-        // �����ǰ����������֣��������µ����������
+        // 如果当前正在输出文字，不触发新的文字输出流
         if (!dialogueActive)
         {
             dialogueActive = true;
@@ -107,7 +105,7 @@ public class DialogueSystem : MonoBehaviour
 
     }
 
-    // ��ʼ����Ի�����Σ�
+    // 开始输出对话（多段）
     private IEnumerator StartDialogue()
     {
         if (outOfRange == false)
@@ -145,7 +143,7 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
-    // �������һ�ζԻ�
+    // 输出其中一段对话
     private IEnumerator DisplayString(string stringToDisplay)
     {
         if (outOfRange == false)
@@ -222,7 +220,7 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
-    // ���ӷ�������ʾ�����������GUI
+    // 添加方法来显示和隐藏输入框GUI
     public void ShowInputFieldGUI()
     {
         if (!isChatting)
@@ -270,7 +268,7 @@ public class DialogueSystem : MonoBehaviour
         {
             inputFieldGUI.SetActive(false);
 
-            // �趨�Ի�������
+            // 设定对话框名称
             nameText.text = Names;
             dialogueText.text = "Thinking....";
             dialogueBoxGUI.gameObject.SetActive(true);
@@ -304,7 +302,7 @@ public class DialogueSystem : MonoBehaviour
                 Debug.LogWarning("No text was generated from this prompt.");
             }
 
-            // ���������GUI����ʼ�Ի�
+            // 隐藏输入框GUI并开始对话
             isTyping = false;
             NPCName();
         }
