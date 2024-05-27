@@ -36,7 +36,7 @@ public class DialogueSystem : MonoBehaviour
     public AudioClip audioClip;
     AudioSource audioSource;
 
-    private OpenAIApi openai = new OpenAIApi();
+    private OpenAIApi openai = new OpenAIApi("YOUR_API_KEY");
     private List<ChatMessage> messages = new List<ChatMessage>();
     public string prompt = "";
 
@@ -50,7 +50,7 @@ public class DialogueSystem : MonoBehaviour
     void Update()
     {
         // ����û��Ƿ��Է�������
-        
+
 
         if (isChatting && isTyping)
         {
@@ -225,7 +225,7 @@ public class DialogueSystem : MonoBehaviour
     // ���ӷ�������ʾ�����������GUI
     public void ShowInputFieldGUI()
     {
-        if (! isChatting)
+        if (!isChatting)
         {
             messages = new List<ChatMessage>();
 
