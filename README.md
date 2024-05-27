@@ -37,11 +37,11 @@ Arti-Heart is an educational 3D game developed for the COMP3329 course at the Un
 - AI dialogues powered by ChatGPT
 
 ## Authors
-- Lyu Tinghua
-- Hung Ka Hing
-- Hu Yixin
-- Zhang Wenkai
-- Zhao Feihan
+- [Lyu Tinghua](https://github.com/AryaLyu)
+- [Hung Ka Hing](https://github.com/henryyy-hung)
+- [Hu Yixin](https://github.com/chron1kle)
+- [Zhang Wenkai](https://github.com/wk-zhang)
+- [Zhao Feihan]()
 
 ## Acknowledgments
 - Inspiration from "It Takes Two" by Hazelight Studios
