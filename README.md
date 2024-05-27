@@ -1,4 +1,4 @@
-# HKU-COMP3329-ArtiHeart
+# HKU-COMP3329-ArtiHeart (人偶之心)
 
 ## Overview
 Arti-Heart is an educational 3D game developed for the COMP3329 course at the University of Hong Kong. Players take on the role of a wizard collecting emotions to imbue a crafted automaton with human-like qualities. The game features a home scene and four mini-games, each focused on different emotions.
